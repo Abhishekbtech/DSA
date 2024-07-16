@@ -1,5 +1,6 @@
 package LinkedList;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 class singlModan {
@@ -18,6 +19,9 @@ class singlModan {
         list.removeFirst();
         list.removeLast();
 
+        System.out.println(list);
+
+        Collections.reverse(list);
         System.out.println(list);
     }
 
