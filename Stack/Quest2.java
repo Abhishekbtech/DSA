@@ -1,7 +1,7 @@
 package Stack;
 // Reverse a Stack
 public class Quest2 {
-    public static void pushAtBottom(Stack<Integer> s, int data) {
+    public static void pushAtBottom(stack<Integer> s, int data) {
         if(s.isEmpty()) {
             s.push(data);
             return;
@@ -12,7 +12,7 @@ public class Quest2 {
         s.push(temp);
     }
 
-    public static void reverse(Stack<Integer> s) {
+    public static void reverse(stack<Integer> s) {
         if(s.isEmpty()) {
             return;
         }
@@ -23,7 +23,7 @@ public class Quest2 {
     }
 
     public static void main(String args[]) {
-        Stack<Integer> stack = new Stack<>();
+        stack<Integer> stack = new stack<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
