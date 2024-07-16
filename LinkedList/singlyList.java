@@ -69,7 +69,7 @@ class singlyList {
             System.out.println("Empty List, nothing to delete");
             return;
         }
-        head = this.head.next;
+        head = head.next;
     }
 
     // deleting at last Postion
@@ -84,13 +84,13 @@ class singlyList {
             return;
         }
 
-        Node currNode = head;
+        Node secondNode = head;
         Node lastNode = head.next;
         while (lastNode.next != null) {
-            currNode = currNode.next;
+            secondNode = secondNode.next;
             lastNode = lastNode.next;
         }
-        currNode.next = null;
+        secondNode.next = null;
     }
 
     // delete the node from given index
@@ -141,7 +141,18 @@ class singlyList {
         }
     }
 
-    // s
+    // size
+    public void getSize() {
+        int size = 0;
+        Node currNode = head;
+        while (currNode!= null) {
+            size++;
+            currNode = currNode.next;
+        }
+        System.out.println(size);
+    }
+
+
     // Printing a list
     public void printList() {
         Node currNode = head;
@@ -159,6 +170,7 @@ class singlyList {
         list.printList();
         list.addLast(3);
         list.printList();
+        list.getSize();
         // try (Scanner scanner = new Scanner(System.in)) {
         //     int n = scanner.nextInt();
         //     // int pos = scanner.nextInt();
