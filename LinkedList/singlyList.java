@@ -125,6 +125,20 @@ class singlyList {
         head = prevNode;
     }
 
+    public Node reverseListRecursive(Node head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+ 
+ 
+        Node newHead = reverseListRecursive(head.next);
+       
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
+ 
+
     // Remove duplicates from sorted linked list
     public void removeDuplicates() {
         if (head == null || head.next == null) {
@@ -171,6 +185,9 @@ class singlyList {
         list.addLast(3);
         list.printList();
         list.getSize();
+        // list.reverseList();
+        list.head = list.reverseListRecursive(list.head);
+        list.printList();
         // try (Scanner scanner = new Scanner(System.in)) {
         //     int n = scanner.nextInt();
         //     // int pos = scanner.nextInt();
